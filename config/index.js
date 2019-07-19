@@ -38,7 +38,7 @@ module.exports = {
                 }
             },
             '/ms': {
-                target: '  https://www.easy-mock.com/mock/5c0fb8f85324d050e6ab1b2a/backend_V1',
+                target: 'https://www.easy-mock.com/mock/5d315953715b4c4113f7f715/demo',
                 changeOrigin: true,
                 pathRewrite: {
                     '/ms': ''
