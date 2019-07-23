@@ -44,7 +44,9 @@ export default {
     Charts: 'Charts',
     Map: 'Map',
     I18n: 'I18n',
-    Theme: 'Theme'
+    Theme: 'Theme',
+    demo: 'Demo',
+    upLoadFile: 'UpLoadFile'
   },
   ...enElement
 }

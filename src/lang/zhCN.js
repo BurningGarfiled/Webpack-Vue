@@ -45,7 +45,9 @@ export default {
     Map: '地图页面',
     I18n: '国际化',
     Theme: '主题切换',
-    RichText: '富文本'
+    RichText: '富文本',
+    demo: '知识案例',
+    upLoadFile: '文件上传'
   },
   ...zhElement
 }
