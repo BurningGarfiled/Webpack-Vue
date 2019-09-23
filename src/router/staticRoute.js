@@ -195,16 +195,22 @@ const staticRoute = [{
 {
   path: '/demo',
   component: Layout,
-  children: [{
-    path: 'js',
-    component: () =>
-                    import(/* webpackChunkName: 'example' */ '../views/skills/javaScript')
-  },
-  {
-    path: 'upLoadFile',
-    component: () =>
-                    import(/* webpackChunkName: 'example' */ '../views/skills/upLoadFile')
-  }
+  children: [
+    {
+      path: 'js',
+      component: () =>
+                      import(/* webpackChunkName: 'example' */ '../views/skills/javaScript')
+    },
+    {
+      path: 'upLoadFile',
+      component: () =>
+                      import(/* webpackChunkName: 'example' */ '../views/skills/upLoadFile')
+    },
+    {
+      path: 'vuex',
+      component: () =>
+                      import('../views/skills/vuex')
+    }
   ]
 }
 ]
