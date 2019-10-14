@@ -30,15 +30,24 @@ module.exports = {
         assetsSubDirectory: 'static',
         assetsPublicPath: '/',
         proxyTable: {
-            '/api': {
-                target: 'http://jsonplaceholder.typicode.com',
-                changeOrigin: true,
-                pathRewrite: {
-                    '/api': ''
-                }
-            },
+            // '/api': {
+            //     target: 'http://jsonplaceholder.typicode.com',
+            //     changeOrigin: true,
+            //     pathRewrite: {
+            //         '/api': ''
+            //     }
+            // },
+            // easy-mock官网
+            // '/ms': {
+            //     target: 'https://www.easy-mock.com/mock/5d315953715b4c4113f7f715/demo',
+            //     changeOrigin: true,
+            //     pathRewrite: {
+            //         '/ms': ''
+            //     }
+            // },
+            // easy-mock本地部署
             '/ms': {
-                target: 'https://www.easy-mock.com/mock/5d315953715b4c4113f7f715/demo',
+                target: 'http://127.0.0.1:7300/mock/5d8ad2e33996e337140568f9/example',
                 changeOrigin: true,
                 pathRewrite: {
                     '/ms': ''

@@ -47,6 +47,7 @@ export default {
     Theme: '主题切换',
     RichText: '富文本',
     demo: '知识案例',
+    arr: '数组操作',
     upLoadFile: '文件上传'
   },
   ...zhElement

@@ -59,7 +59,7 @@
 
 <script>
 export default {
-  name: 'JavaScript',
+  name: 'ArrDemo',
   data() {
     return {
       sortArr: []

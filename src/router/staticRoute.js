@@ -197,9 +197,9 @@ const staticRoute = [{
   component: Layout,
   children: [
     {
-      path: 'js',
+      path: 'arr',
       component: () =>
-                      import(/* webpackChunkName: 'example' */ '../views/skills/javaScript')
+                      import(/* webpackChunkName: 'example' */ '../views/skills/arrDemo')
     },
     {
       path: 'upLoadFile',

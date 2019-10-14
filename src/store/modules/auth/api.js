@@ -14,7 +14,7 @@ export function login(username, password) {
 export function getNavList(token) {
   return request({
     url: '/user/navlist',
-    method: 'post',
+    method: 'get',
     params: { token }
   })
 }
