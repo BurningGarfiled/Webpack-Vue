@@ -13,6 +13,7 @@
 <script>
 /* eslint-disable */
 import { mapState } from 'vuex'
+// import { resolve } from 'dns'
 export default {
   name: 'Vuex',
   data() {
@@ -218,6 +219,206 @@ export default {
       // let b = Object.create(null) // 没有任何东西，可以自己定义方法属性
       // console.log(a)
       // console.log(b)
+      // let obj = new Proxy({}, {
+      //   get: function (target, key, receiver) {
+      //     console.log('get')
+      //     console.log(target)
+      //     console.log(key)
+      //     console.log(receiver)
+      //     return Reflect.get(target, key, receiver)
+      //   },
+      //   set: function (target, key, value, receiver) {
+      //     console.log('set')
+      //     console.log(target)
+      //     console.log(key)
+      //     console.log(value)
+      //     console.log(receiver)
+      //     return Reflect.set(target, key, value, receiver)
+      //   }
+      // })
+      // obj.count = 1
+      // ++obj.count
+      // let handler = {
+      //   get: function (target, name) {
+      //     console.log('get')
+      //     console.log(target)
+      //     console.log(name)
+      //     if (name === 'prototype') {
+      //       return Object.prototype
+      //     }
+      //     return 'Hello, ' + name
+      //   },
+      //   apply: function (target, thisBinding, args) {
+      //     console.log('apply')
+      //     console.log(target)
+      //     console.log(thisBinding)
+      //     console.log(args)
+      //     return args[0]
+      //   },
+      //   construct: function (target, args) {
+      //     console.log('construct')
+      //     console.log(target)
+      //     console.log(args)
+      //     return { value: args[1] }
+      //   }
+      // }
+      // let fproxy = new Proxy(function (x, y) {
+      //   return x + y
+      // }, handler)
+      // console.log(fproxy(1, 2))
+      // console.log(new fproxy(1, 2))
+      // console.log(fproxy.prototype === Object.prototype)
+      // console.log(fproxy.foo)
+      // let person = {
+      //   name: '张三'
+      // }
+      // let proxy = new Proxy(person, {
+      //   get: function(target, property) {
+      //     console.log(target)
+      //     console.log(property)
+      //     if (property in target) {
+      //       return target[property]
+      //     } else {
+      //       throw new ReferenceError('错误')
+      //     }
+      //   }
+      // })
+      // // console.log(proxy.name)
+      // let obj = Object.create(proxy)
+      // console.log(obj.name)
+      // function createArray(...elements) {
+      //   let handler = {
+      //     get(target, propKey, receiver) {
+      //       let index = Number(propKey)
+      //       if (index < 0) {
+      //         propKey = String(target.length + index)
+      //       }
+      //       return Reflect.get(target, propKey, receiver)
+      //     }
+      //   }
+      //   let target = []
+      //   target.push(...elements)
+      //   return new Proxy(target, handler)
+      // }
+      // let arr = createArray('a', 'b', 'c')
+      // console.log(arr[-1])
+      // function timeout(ms) {
+      //   return new Promise((resolve, reject) => {
+      //     setTimeout(resolve, ms, 'done')
+      //   })
+      // }
+      // timeout(100).then(value => {
+      //   console.log(value)
+      // })
+      // let promise  = new Promise((resolve, reject) => {
+      //   console.log('Promise')
+      //   resolve()
+      // })
+      // promise.then(() => {
+      //   console.log('Resolced')
+      // })
+      // console.log('Hi')
+      // let p1 = new Promise((resolve, reject) => {
+      //   setTimeout(() => {
+      //     reject(new Error('错误'))
+      //   }, 3000)
+      // })
+      // let p2 = new Promise((resolve, reject) => {
+      //   setTimeout(() => {
+      //     resolve(p1)
+      //   }, 1000)
+      // })
+      // p2.then(result => console.log(result)).catch(error => console.log(error))
+      // let p = new Promise((resolve, reject) => {})
+      // console.log(p)
+      // let p = Promise.resolve()
+      // console.log(p)
+      // let thenable = {
+      //   then: (resolve, reject) => {
+      //     resolve(42)
+      //   }
+      // }
+      // let p = Promise.resolve(thenable)
+      // p.then(value => console.log(value))
+      // setTimeout(() => {
+      //   console.log('3')
+      // }, 0)
+      // Promise.resolve().then(() => console.log('2'))
+      // console.log(1)
+      // Promise.prototype.done = function (onFulfilled, onRejected) {
+      //   this.then(onFulfilled, onRejected)
+      //       .catch(reason => {
+      //         setTimeout(() => {throw reason}, 0)
+      //       })
+      // }
+      // let p = Promise.resolve()
+      // p.finally(console.log(111))
+      // const f = () => console.log('1')
+      // Promise.try(f)
+      // console.log('2')d
+      // function* helloWordeGenerator() {
+      //   yield 'hello'
+      //   yield 'world'
+      //   return 'ending'
+      // }
+      // let hw = helloWordeGenerator()
+      // console.log(hw.next())
+      // console.log(hw.next())
+      // console.log(hw.next())
+      // console.log(hw.next())
+      // function* f() {
+      //   console.log('执行完毕')
+      // }
+      // let generator = f()
+      // setTimeout(() => generator.next(), 2000)
+      // let arr = [1, [[2, 3], 4], [5, 6]]
+      // let flat = function* (a) {
+      //   let length = a.length
+      //   for (let i = 0; i < length; i++) {
+      //     let item = a[i]
+      //     if (typeof item !== 'number') {
+      //       yield* flat(item)
+      //     } else {
+      //       yield item
+      //     }
+      //   }
+      // }
+      // for (let f of flat(arr)) {
+      //   console.log(f)
+      // }
+      // let myIterator = {}
+      // myIterator[Symbol.iterator] = function* () {
+      //   yield 1
+      //   yield 2
+      //   yield 3
+      // }
+      // console.log(myIterator)
+      // console.log([...myIterator])
+      // for (let i of myIterator) {
+      //   console.log(i)
+      // }
+      // function* f() {
+      //   for (let  i = 0; true; i++) {
+      //     let reset = yield i
+      //     console.log(reset)
+      //     if (reset) {
+      //       i = -1
+      //     }
+      //   }
+      // }
+      // let g = f()
+      // g.next()
+      // g.next(12)
+      // g.next()
+      // function* foo(x) {
+      //   let y = 2 * (yield (x + 1))
+      //   let z = yield (y / 3)
+      //   console.log(x, y, z)
+      //   return (x + y + z)
+      // }
+      // let a = foo(5)
+      // console.log(a.next())
+      // console.log(a.next(12))
     },
     setVuex() {
       this.$store.dispatch('setNum', 9)
