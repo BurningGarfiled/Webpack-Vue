@@ -419,6 +419,172 @@ export default {
       // let a = foo(5)
       // console.log(a.next())
       // console.log(a.next(12))
+      // function Point(x, y) {
+      //   this.x = x
+      //   this.y = y
+      // }
+      // Point.prototype.toString = function() {
+      //   return '(' + this.x + ',' + this.y + ')'
+      // }
+      // let p = new Point(1, 2)
+      // console.log(p)
+      // class Point {
+      //   constructor(x, y) {
+      //     this.x = x
+      //     this.y = y
+      //   }
+      //   toString() {
+      //     return '(' + this.x + ',' + this.y + ')'
+      //   }
+      // }
+      // console.log(point.toString())
+      // console.log(typeof Point)
+      // class Bar {
+      //   doStuff() {
+      //     console.log('stuff')
+      //   }
+      // }
+      // let b = new Bar()
+      // b.doStuff()
+      // const obj = {
+      //   name: '王京',
+      //   sex: '男',
+      //   age: '26'
+      // }
+      // class Point {
+      //   constructor() {
+      //     console.log('初始化')
+      //   }
+      // }
+      // let p = new Point()
+      // const MyClass = class Me {
+      //   getClassName() {
+      //     return Me.name
+      //   }
+      // }
+      // let inst = new MyClass()
+      // console.log(inst.getClassName())
+      // console.log(Me.name)
+      // let person = new class {
+      //   constructor(name) {
+      //     this.name = name
+      //   }
+      //   sayName() {
+      //     console.log(this.name)
+      //   }
+      // }('王京')
+      // person.sayName()
+      // class Foo {
+      //   static me() {
+      //     console.log('hello')
+      //   }
+      // }
+      // class Bar extends Foo {}
+      // let foo = new Foo()
+      // Foo.me()
+      // foo.me()
+      // class Foo {}
+      // Foo.name = '王京'
+      // console.log(Foo.name)
+      // class person {
+      //   name = '王京'
+      //   age = 26
+      //   constructor() {
+      //     console.log(this.name)
+      //   }
+      // }
+      // let p = new person()
+      // console.log(p.age)
+      // class A {
+      //   constructor() {
+      //     this.p = 2
+      //   }
+      // }
+      // A.prototype.name = '王京'
+      // class B extends A {
+      //   get m() {
+      //     console.log(super.name)
+      //   }
+      // }
+      // let b = new B()
+      // b.m
+      // async function getStockPriceByName(name) {
+      //   let symbol = await getStockSymbol(name)
+      //   let stockPrice = await getStockPrice(symbol)
+      //   console.log(stockPrice)
+      // }
+      // getStockPriceByName('goog').then(function (result) {
+      //   console.log(result)
+      // })
+      // function timeout(ms) {
+      //   return new Promise((resolve) => {
+      //     setTimeout(resolve, ms)
+      //   })
+      // }
+      // async function asyncPrint(value, ms) {
+      //   await timeout(ms)
+      //   console.log(value)
+      // }
+      // asyncPrint('你好', 3000)
+      // let arr = ['one', 'two', 'three', 'four']
+      // let sum = arr.reduce((x, y, z, a) => { // x: reduce返回值；y：当前循环元素；z：索引；a：数组对象
+      //     console.log(x, y)
+      //     console.log(x + y)
+      //     return x + y
+      //   }, '开始') // 设置参数：reduce的第一次返回值。不设置：默认为数组第一个元素，循环从第二个元素开始；设置：循环从第一个元素开始
+      // console.log(sum)
+      // function add(x, y) {
+      //   return x + y
+      // }
+      // console.log(add(1, 2))
+      // function curryingAdd(x) {
+      //   return function (y) {
+      //     return x + y
+      //   }
+      // }
+      // console.log(curryingAdd(1)(2))
+      // function check(reg, txt) {
+      //   return reg.test(txt)
+      // }
+      // console.log(check(/\d+/g, 'test'))
+      // function curryingCheck(reg) {
+      //   return function(txt) {
+      //     return reg.test(txt)
+      //   }
+      // }
+      // let hasNumber = curryingCheck(/\d+/g)
+      // // console.log(hasNumber('test'))
+      // console.log(curryingCheck(/\d+/g)('test'))
+      // let add = () => {
+      //   let list = Array.prototype.slice.call(arguments)
+      //   let adder = () => {
+      //     list.push(...arguments)
+      //     return adder
+      //   }
+      //   // let adder = () => {
+      //   //   return adder
+      //   // }
+      //   adder.toString = () => {
+      //     return list.reduce((a, b) => {
+      //       return a + b
+      //     })
+      //   }
+      //   return adder
+      // }
+      // console.log(add(1)(4)(5))
+
+      // 柯里化
+      // function add(...n) {
+      //   let _args = [...n]
+      //   let _adder = (...arr) => {
+      //     _args.push(...arr)
+      //     return _adder
+      //   }
+      //   _adder.toString = () => _args.reduce((a, b) => a + b)
+
+      //   return _adder
+      // }
+      // console.log(add(1)(2)(3, 4)) // 10
     },
     setVuex() {
       this.$store.dispatch('setNum', 9)
