@@ -20,7 +20,7 @@
         "express": "^4.17.1",
         "finalhandler": "^1.1.2",
         "js-cookie": "^2.2.0",
-        "lodash": "^4.17.14",
+        "lodash": "^4.17.21",
         "mockjs": "^1.0.1-beta3",
         "nprogress": "^0.2.0",
         "proxy-addr": "^2.0.5",
