@@ -68,7 +68,7 @@
         "http-proxy-middleware": "^0.19.1",
         "less": "^3.9.0",
         "less-loader": "^4.0.5",
-        "node-sass": "^4.12.0",
+        "node-sass": "^7.0.0",
         "opn": "^5.1.0",
         "optimize-css-assets-webpack-plugin": "^5.0.3",
         "ora": "^1.2.0",
